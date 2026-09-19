@@ -71,11 +71,29 @@ a { color: inherit; text-decoration: none; }
   font-weight: 700;
 }
 .logo span { color: #6fd8a8; }
-nav a:not(.btn) {
-  margin-right: 24px;
-  color: rgba(255,255,255,0.85);
+
+.role-switch {
+  display: flex;
+  background: rgba(255,255,255,0.08);
+  border-radius: 999px;
+  padding: 4px;
 }
-nav a:not(.btn):hover { color: var(--color-white); }
+.role-btn {
+  border: none;
+  background: transparent;
+  color: rgba(255,255,255,0.75);
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.role-btn:hover { color: var(--color-white); }
+.role-btn[aria-selected="true"] {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
 
 /* Hero */
 .hero {
@@ -125,6 +143,30 @@ nav a:not(.btn):hover { color: var(--color-white); }
   justify-content: center;
   font-weight: 700;
 }
+
+.triage-split {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 12px;
+}
+.triage-card {
+  padding: 16px;
+  border-radius: var(--radius);
+  border: 1px solid #e6e8ec;
+}
+.triage-card h4 { margin: 0 0 8px; font-size: 1rem; }
+.triage-card p { margin: 0; font-size: 0.92rem; }
+.triage-auto {
+  background: #eefaf3;
+  border-color: #bfe8d3;
+}
+.triage-auto h4 { color: var(--color-primary-dark); }
+.triage-manual {
+  background: #fff6ea;
+  border-color: #f0dcb3;
+}
+.triage-manual h4 { color: #8a5a12; }
 
 /* Benefits */
 .benefits { padding: 80px 0; background: var(--color-bg-alt); }

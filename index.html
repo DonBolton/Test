@@ -3,124 +3,210 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Konkursauksjon &mdash; Enkel auksjonering av konkursbo for bostyrere</title>
+<title>Konkursauksjon &mdash; Realiser konkursbo uten å være takstmann</title>
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body data-role="bostyrer">
 
 <header class="site-header">
   <div class="container header-inner">
     <div class="logo">Konkurs<span>Auksjon</span></div>
-    <nav>
-      <a href="#slik-fungerer-det">Slik fungerer det</a>
-      <a href="#fordeler">Fordeler</a>
-      <a href="#kontakt" class="btn btn-outline">Kontakt oss</a>
-    </nav>
+    <div class="role-switch" role="tablist" aria-label="Velg rolle">
+      <button type="button" class="role-btn" data-set-role="bostyrer" role="tab" aria-selected="true">Jeg er bostyrer</button>
+      <button type="button" class="role-btn" data-set-role="kjoper" role="tab" aria-selected="false">Jeg er kjøper</button>
+    </div>
   </div>
 </header>
 
-<section class="hero">
-  <div class="container hero-inner">
-    <h1>Auksjoner bort konkursbo &mdash; raskt, transparent og uten friksjon</h1>
-    <p class="hero-sub">
-      En digital plattform bygget for bostyrere som skal realisere eiendeler i konkursbo.
-      Publiser boet, sett vilkår, og la kvalifiserte budgivere konkurrere &mdash; alt dokumentert og sporbart.
-    </p>
-    <div class="hero-cta">
-      <a href="#kontakt" class="btn btn-primary">Book en demo</a>
-      <a href="#slik-fungerer-det" class="btn btn-ghost">Se hvordan det fungerer</a>
-    </div>
-  </div>
-</section>
+<!-- ============ BOSTYRER ============ -->
+<div class="role-view" data-role-view="bostyrer">
 
-<section class="problem">
-  <div class="container">
-    <h2>Realisering av konkursbo tar for lang tid</h2>
-    <div class="problem-grid">
-      <div class="problem-card">
-        <h3>Manuell prosess</h3>
-        <p>Telefoner, e-poster og regneark gjør prosessen tidkrevende og vanskelig å dokumentere i etterkant.</p>
-      </div>
-      <div class="problem-card">
-        <h3>Begrenset budgiverfeltet</h3>
-        <p>Uten en samlet markedsplass når man sjelden det bredeste og mest betalingsvillige publikummet.</p>
-      </div>
-      <div class="problem-card">
-        <h3>Krav til dokumentasjon</h3>
-        <p>Kreditorer og tilsynsmyndigheter forventer full sporbarhet på hvordan boets verdier er realisert.</p>
+  <section class="hero">
+    <div class="container hero-inner">
+      <h1>Bli kvitt konkursboet &mdash; uten å måtte være takstmann</h1>
+      <p class="hero-sub">
+        Du får boet inn, ikke kompetansen til å verdivurdere det. Registrer det som er i boet,
+        så sorterer vi automatisk: enkle og rimelige gjenstander prissettes og legges ut med en gang.
+        Det som er verdifullt eller vanskelig å vurdere, sendes til forhandling eller auksjon med kvalifiserte kjøpere.
+      </p>
+      <div class="hero-cta">
+        <a href="#kontakt" class="btn btn-primary">Registrer et bo</a>
+        <a href="#slik-fungerer-det" class="btn btn-ghost">Se hvordan det fungerer</a>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="slik-fungerer-det" class="how-it-works">
-  <div class="container">
-    <h2>Slik fungerer det</h2>
-    <ol class="steps">
-      <li>
-        <span class="step-number">1</span>
-        <div>
-          <h3>Legg ut boet</h3>
-          <p>Bostyrer registrerer eiendeler, dokumentasjon og vilkår for auksjonen på et par minutter.</p>
+  <section class="problem">
+    <div class="container">
+      <h2>Problemet er ikke boet &mdash; det er tiden og kompetansen</h2>
+      <div class="problem-grid">
+        <div class="problem-card">
+          <h3>Ingen takstkompetanse</h3>
+          <p>Et bo kan inneholde alt fra kontorutstyr til maskinpark. Du skal ikke måtte vite hva alt sammen er verdt.</p>
         </div>
-      </li>
-      <li>
-        <span class="step-number">2</span>
-        <div>
-          <h3>Kvalifiserte budgivere melder interesse</h3>
-          <p>Interessenter verifiseres og får tilgang til nødvendig dokumentasjon før budrunden starter.</p>
+        <div class="problem-card">
+          <h3>For mange bo, for lite tid</h3>
+          <p>Manuell verdivurdering og salgsprosess på hver eneste gjenstand er ikke gjennomførbart når boene strømmer inn.</p>
         </div>
-      </li>
-      <li>
-        <span class="step-number">3</span>
-        <div>
-          <h3>Transparent budrunde</h3>
-          <p>Alle bud logges med tidsstempel. Bostyrer følger prosessen i sanntid, med full historikk.</p>
+        <div class="problem-card">
+          <h3>Krav til dokumentasjon</h3>
+          <p>Kreditorer og tilsyn forventer sporbarhet på hvordan hver eneste eiendel er realisert &mdash; og til hvilken pris.</p>
         </div>
-      </li>
-      <li>
-        <span class="step-number">4</span>
-        <div>
-          <h3>Sluttføring og dokumentasjon</h3>
-          <p>Ved auksjonens slutt genereres en komplett rapport klar for boets regnskap og bobehandling.</p>
-        </div>
-      </li>
-    </ol>
-  </div>
-</section>
-
-<section id="fordeler" class="benefits">
-  <div class="container">
-    <h2>Hvorfor bostyrere velger oss</h2>
-    <div class="benefits-grid">
-      <div class="benefit">
-        <h3>Raskere realisering</h3>
-        <p>Kortere tid fra bobehandling til utbetaling til kreditorene.</p>
-      </div>
-      <div class="benefit">
-        <h3>Bredere budgiverfelt</h3>
-        <p>Nå flere potensielle kjøpere enn ved tradisjonelle salgskanaler.</p>
-      </div>
-      <div class="benefit">
-        <h3>Full sporbarhet</h3>
-        <p>Automatisk dokumentasjon av hele prosessen &mdash; klar for revisjon og tilsyn.</p>
-      </div>
-      <div class="benefit">
-        <h3>Ingen ekstra verktøy</h3>
-        <p>Alt bostyrer trenger samlet ett sted, uten regneark eller e-posttråder.</p>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+
+  <section id="slik-fungerer-det" class="how-it-works">
+    <div class="container">
+      <h2>Slik fungerer det for deg som bostyrer</h2>
+      <ol class="steps">
+        <li>
+          <span class="step-number">1</span>
+          <div>
+            <h3>Registrer boet</h3>
+            <p>Legg inn eiendelene &mdash; med bilder og enkel beskrivelse. Ingen verdivurdering kreves fra deg.</p>
+          </div>
+        </li>
+        <li>
+          <span class="step-number">2</span>
+          <div>
+            <h3>Automatisk triage</h3>
+            <p>Plattformen vurderer hver gjenstand og deler den i to spor, basert på verdi og kompleksitet:</p>
+            <div class="triage-split">
+              <div class="triage-card triage-auto">
+                <h4>Lav verdi / enkelt å vurdere</h4>
+                <p>Prissettes automatisk med markedsdata og publiseres for salg umiddelbart &mdash; ingen manuell jobb for deg.</p>
+              </div>
+              <div class="triage-card triage-manual">
+                <h4>Høy verdi / krevende å vurdere</h4>
+                <p>Sendes til forhandling eller strukturert auksjonsprosess med kvalifiserte kjøpere, med støtte fra vårt team.</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <span class="step-number">3</span>
+          <div>
+            <h3>Følg fremdriften</h3>
+            <p>Se status på alle eiendeler i sanntid &mdash; hva som er solgt, hva som er under forhandling, og hva som venter på bud.</p>
+          </div>
+        </li>
+        <li>
+          <span class="step-number">4</span>
+          <div>
+            <h3>Oppgjør og dokumentasjon</h3>
+            <p>Motta oppgjør og en komplett rapport per eiendel &mdash; klar for boets regnskap og eventuelt tilsyn.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="fordeler" class="benefits">
+    <div class="container">
+      <h2>Hvorfor bostyrere velger oss</h2>
+      <div class="benefits-grid">
+        <div class="benefit">
+          <h3>Ingen takstkompetanse nødvendig</h3>
+          <p>Systemet vurderer og prissetter det som er kurant &mdash; du trenger ikke være ekspert på hver eiendelskategori.</p>
+        </div>
+        <div class="benefit">
+          <h3>Automatikk der det er mulig</h3>
+          <p>Rimelige og lett vurderbare gjenstander selges uten at du løfter en finger.</p>
+        </div>
+        <div class="benefit">
+          <h3>Forhandling og auksjon der det trengs</h3>
+          <p>Dyre eller kompliserte eiendeler får den prosessen de faktisk krever, uten at det stopper resten av boet.</p>
+        </div>
+        <div class="benefit">
+          <h3>Full sporbarhet</h3>
+          <p>Automatisk dokumentasjon av hele prosessen, klar for revisjon.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- ============ KJØPER ============ -->
+<div class="role-view" data-role-view="kjoper" hidden>
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <h1>Finn gode kjøp fra konkursbo</h1>
+      <p class="hero-sub">
+        Fra kontorutstyr til maskinpark. Bla gjennom aktive bo, kjøp rimelige gjenstander direkte til fastsatt pris,
+        eller by på det som går til forhandling og auksjon.
+      </p>
+      <div class="hero-cta">
+        <a href="#kontakt" class="btn btn-primary">Se aktive bo</a>
+        <a href="#slik-fungerer-det-kjoper" class="btn btn-ghost">Se hvordan det fungerer</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="problem">
+    <div class="container">
+      <h2>Hvorfor kjøpe fra konkursbo hos oss?</h2>
+      <div class="problem-grid">
+        <div class="problem-card">
+          <h3>Samlet markedsplass</h3>
+          <p>Alle aktive bo på ett sted, i stedet for spredt over ulike bostyrerkontorer og kanaler.</p>
+        </div>
+        <div class="problem-card">
+          <h3>To måter å kjøpe på</h3>
+          <p>Enkle gjenstander til fast pris &mdash; kjøp umiddelbart. Verdifulle eiendeler &mdash; by i en transparent prosess.</p>
+        </div>
+        <div class="problem-card">
+          <h3>Verifisert og dokumentert</h3>
+          <p>Full dokumentasjon på eiendel og eierhistorikk før du legger inn bud.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="slik-fungerer-det-kjoper" class="how-it-works">
+    <div class="container">
+      <h2>Slik fungerer det for deg som kjøper</h2>
+      <ol class="steps">
+        <li>
+          <span class="step-number">1</span>
+          <div>
+            <h3>Bla gjennom aktive bo</h3>
+            <p>Søk og filtrer på kategori, pris og bosted.</p>
+          </div>
+        </li>
+        <li>
+          <span class="step-number">2</span>
+          <div>
+            <h3>Kjøp direkte eller by</h3>
+            <p>Rimelige gjenstander kan kjøpes til fastsatt pris umiddelbart. Verdifulle eiendeler går gjennom forhandling eller auksjon.</p>
+          </div>
+        </li>
+        <li>
+          <span class="step-number">3</span>
+          <div>
+            <h3>Vinn og motta eiendelen</h3>
+            <p>Få dokumentasjon og oppgjørsinformasjon rett i plattformen.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+</div>
 
 <section id="kontakt" class="contact">
   <div class="container contact-inner">
-    <h2>Ønsker du å teste plattformen?</h2>
-    <p>Ta kontakt for en uforpliktende gjennomgang tilpasset ditt konkursbo.</p>
+    <h2 data-role-text="bostyrer">Ønsker du å registrere et bo?</h2>
+    <h2 data-role-text="kjoper" hidden>Ønsker du å se aktive bo?</h2>
+    <p data-role-text="bostyrer">Ta kontakt for en uforpliktende gjennomgang &mdash; ingen verdivurdering kreves fra deg på forhånd.</p>
+    <p data-role-text="kjoper" hidden>Meld interesse, så gir vi deg tilgang til aktive bo og kommende auksjoner.</p>
     <form class="contact-form" onsubmit="return false;">
+      <input type="hidden" name="rolle" id="rolle-input" value="bostyrer">
       <input type="text" name="navn" placeholder="Navn" required>
       <input type="email" name="epost" placeholder="E-post" required>
-      <textarea name="melding" placeholder="Fortell kort om boet ditt" rows="4"></textarea>
+      <textarea name="melding" placeholder="Fortell kort om boet ditt / hva du ser etter" rows="4"></textarea>
       <button type="submit" class="btn btn-primary">Send henvendelse</button>
     </form>
   </div>
@@ -131,6 +217,23 @@
     <p>&copy; 2026 KonkursAuksjon. Alle rettigheter forbeholdt.</p>
   </div>
 </footer>
+
+<script>
+  const roleButtons = document.querySelectorAll('[data-set-role]');
+  const roleViews = document.querySelectorAll('[data-role-view]');
+  const roleTexts = document.querySelectorAll('[data-role-text]');
+  const roleInput = document.getElementById('rolle-input');
+
+  function setRole(role) {
+    document.body.setAttribute('data-role', role);
+    roleButtons.forEach(btn => btn.setAttribute('aria-selected', btn.dataset.setRole === role ? 'true' : 'false'));
+    roleViews.forEach(view => { view.hidden = view.dataset.roleView !== role; });
+    roleTexts.forEach(el => { el.hidden = el.dataset.roleText !== role; });
+    roleInput.value = role;
+  }
+
+  roleButtons.forEach(btn => btn.addEventListener('click', () => setRole(btn.dataset.setRole)));
+</script>
 
 </body>
 </html>
