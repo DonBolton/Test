@@ -14,6 +14,7 @@
     <nav class="main-nav">
       <a href="#kuratert">Kommende salg</a>
       <a href="#slik-fungerer">Slik fungerer det</a>
+      <a href="#agenter">AI-assistenter</a>
       <a href="#finansiering">Finansiering</a>
       <a href="#for-bostyrere">For bostyrere</a>
     </nav>
@@ -90,6 +91,7 @@
             <span class="lot-time">2t 14min igjen</span>
           </div>
           <span class="tag tag-auction">Auction</span>
+          <button type="button" class="agent-chip" disabled>Spør Finn om dette objektet <span class="soon">(AI, kommer)</span></button>
         </div>
       </article>
 
@@ -103,6 +105,7 @@
             <span class="lot-time">Tilgjengelig nå</span>
           </div>
           <span class="tag tag-buynow">Buy now</span>
+          <button type="button" class="agent-chip" disabled>Spør Finn om dette objektet <span class="soon">(AI, kommer)</span></button>
         </div>
       </article>
 
@@ -116,6 +119,7 @@
             <span class="lot-time">1d 4t igjen</span>
           </div>
           <span class="tag tag-auction">Auction</span>
+          <button type="button" class="agent-chip" disabled>Spør Finn om dette objektet <span class="soon">(AI, kommer)</span></button>
         </div>
       </article>
 
@@ -129,6 +133,7 @@
             <span class="lot-time">Privat prosess</span>
           </div>
           <span class="tag tag-private">Private sale</span>
+          <button type="button" class="agent-chip" disabled>Spør Finn om dette objektet <span class="soon">(AI, kommer)</span></button>
         </div>
       </article>
 
@@ -172,12 +177,55 @@
   </div>
 </section>
 
+<section id="agenter" class="agents">
+  <div class="container">
+    <div class="section-heading">
+      <h2>AI-assistenter i prosessen</h2>
+      <p>Tre AI-agenter hjelper deg raskere gjennom prosessen. På de store sakene er det alltid et menneske som gjør den endelige vurderingen.</p>
+    </div>
+    <div class="agent-grid">
+      <div class="agent-card">
+        <div class="agent-head">
+          <span class="agent-avatar agent-avatar--triage" aria-hidden="true">AI</span>
+          <span class="agent-tag">AI-assistent</span>
+        </div>
+        <h3>Iris &mdash; boregistrering</h3>
+        <span class="agent-scope">For bostyrere</span>
+        <p>Hjelper deg å registrere boet, strukturere dokumentasjon, og gir et forslag til hvilken salgsform hver eiendel passer &mdash; auksjon, direktesalg eller privat salg.</p>
+      </div>
+      <div class="agent-card">
+        <div class="agent-head">
+          <span class="agent-avatar agent-avatar--object" aria-hidden="true">AI</span>
+          <span class="agent-tag">AI-assistent</span>
+        </div>
+        <h3>Finn &mdash; objektguide</h3>
+        <span class="agent-scope">For kjøpere</span>
+        <p>Svarer på spørsmål om et konkret objekt basert på condition report, proveniens og dokumentrom. Kobler deg videre til selger eller rådgiver når spørsmålet krever det.</p>
+      </div>
+      <div class="agent-card">
+        <div class="agent-head">
+          <span class="agent-avatar agent-avatar--concierge" aria-hidden="true">AI</span>
+          <span class="agent-tag">AI-assistent</span>
+        </div>
+        <h3>Sara &mdash; privat salg</h3>
+        <span class="agent-scope">Privat salg &amp; finansiering</span>
+        <p>Tar imot &laquo;Be om pris&raquo;-forespørsler, stiller oppklarende spørsmål, og ruter deg videre til riktig menneskelig spesialist.</p>
+      </div>
+    </div>
+    <p class="agent-disclaimer">
+      Alle tre er AI-assistenter &mdash; ikke en erstatning for menneskelig vurdering. På virksomheter, patenter, eiendom
+      og andre høyverdi-saker er det alltid en menneskelig spesialist som gjør den endelige vurderingen og forhandlingen.
+    </p>
+  </div>
+</section>
+
 <section class="private-sale-highlight">
   <div class="container private-sale-inner">
     <p class="eyebrow eyebrow-light">Private Sale</p>
     <h2>For de mest eksklusive objektene ber du om pris</h2>
     <p>En hel virksomhet eller en unik eiendom passer ikke alltid inn i en åpen budrunde. Be om pris, så får du en personlig spesialist som håndterer forespørsel, forhandling og prosess.</p>
     <a href="#kontakt" class="btn btn-primary">Be om pris</a>
+    <p class="agent-inline-note">Sara (AI) tar imot forespørselen og kobler deg videre til spesialisten.</p>
   </div>
 </section>
 
@@ -203,6 +251,7 @@
         <div>
           <h3>Registrer boet</h3>
           <p>Legg inn eiendelene med dokumentasjon du allerede har. Ingen verdivurdering kreves fra deg.</p>
+          <p class="step-agent-note">Iris (AI) hjelper deg gjennom registreringen.</p>
         </div>
       </li>
       <li>
